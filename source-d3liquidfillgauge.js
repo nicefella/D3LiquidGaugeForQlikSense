@@ -1,3 +1,8 @@
+define(["text!./clippath.css"], function(cssContent) {'use strict';
+	$("<style>").html(cssContent).appendTo("head");
+	return ;
+});
+
 /*!
  * @license Open source under BSD 2-clause (http://choosealicense.com/licenses/bsd-2-clause/)
  * Copyright (c) 2015, Curtis Bratton
@@ -139,8 +144,10 @@ function loadLiquidFillGauge(elementId, value, config) {
 
     // The inner circle with the clipping wave attached.
     var fillCircleGroup = gaugeGroup.append("g")
-        .attr("clip-path", "url(#clipWave" + elementId + ")");
-    fillCircleGroup.append("circle")
+		.attr("class", "clipwave");
+    //    .attr("clip-path", "url(#clipWave" + elementId + ")");
+
+	fillCircleGroup.append("circle")
         .attr("cx", radius)
         .attr("cy", radius)
         .attr("r", fillCircleRadius)
