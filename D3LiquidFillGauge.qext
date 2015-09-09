@@ -4,5 +4,6 @@
 	"icon": "text-image",
 	"type": "visualization",
 	"version": "1.0",
+    "preview":"fillgauge.png",
 	"author": "Ismail Baygin - Qlik Turkey"
 }
