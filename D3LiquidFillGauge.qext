@@ -1,0 +1,9 @@
+{
+	"name": "D3LiquidFillGauge",
+	"description": "D3 Liquid Fill Gauge",
+	"icon": "text-image",
+	"type": "visualization",
+	"version": "1.0",
+    "preview":"fillgauge.png",
+	"author": "Ismail Baygin - Qlik Turkey"
+}
