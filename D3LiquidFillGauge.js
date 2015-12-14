@@ -64,7 +64,28 @@ define(["jquery", "./liquidfillgauge-properties", "./source-d3liquidfillgauge", 
                   	  gaugeConfig.waveAnimate = layout.waveAnimate;
                       gaugeConfig.valueCountUp = layout.valueCountUp;
                       gaugeConfig.displayPercent = layout.displayPercent;
-                  
+					  
+                      var currentcolor;
+					  					  
+					  if(layout.props.colorsSwitch)
+					  {
+						if(measure.qNum <= layout.props.inferiorLimit1)
+						{
+							currentcolor = layout.props.Color1;	
+						}
+						else if(measure.qNum > layout.props.inferiorLimit2)
+						{
+							currentcolor = layout.props.Color3;	
+						}
+						else
+						{
+							currentcolor = layout.props.Color2;	
+						}
+					
+					  gaugeConfig.circleColor = getColorHex(currentcolor);
+					  gaugeConfig.textColor = getColorHex(currentcolor);
+					  }
+					  
                       loadLiquidFillGauge(svg.id, measure.qNum, gaugeConfig);
 
 				});
