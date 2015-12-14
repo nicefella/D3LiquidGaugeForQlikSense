@@ -2,9 +2,9 @@
  * @owner Ismail Baygin
  */
 
-define( [], function () {
-
-	return {
+define( ["./props-ColorSection"], function (ColorsSection) {
+				
+	return { 
 		type: "items",
 		component: "accordion",
 		items: {
@@ -66,7 +66,7 @@ define( [], function () {
 								type: "integer",
                                 ref: "waveAnimateTime",
 								label: "waveAnimateTime",
-								defaultValue: 18000
+								defaultValue: 3000
 							},
                            circleThickness: {
 								type: "number",
@@ -109,14 +109,14 @@ define( [], function () {
                                 component: "color-picker",
                                 ref: "waveColor",
 								label: "waveColor",
-								defaultValue: 4
+								defaultValue: 3
 							},
                           waveTextColor: {
 								type: "integer",
                                 component: "color-picker",
                                 ref: "waveTextColor",
 								label: "waveTextColor",
-								defaultValue: 11
+								defaultValue: 5
 							},
                           valueCountUp: {
 								type: "boolean",
@@ -135,18 +135,19 @@ define( [], function () {
                     			component: "color-picker",  
                                 ref: "circleColor",
 								label: "circleColor",
-								defaultValue: 11
-							},
+								defaultValue: 3
+							},		
                           textColor: {
 								type: "integer",  
                     			component: "color-picker",
                                 ref: "textColor",
 								label: "textColor",
-								defaultValue: 10
+								defaultValue: 3
 							}
-						}
-					  }
+      					}
+					  },
+					  Colors: ColorsSection					  
 		}
-	};
+	};	
 
 } );
