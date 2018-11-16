@@ -273,7 +273,7 @@ function loadLiquidFillGauge(elementId, value, config) {
 function getColorHex(colornum) {
     
 	// Return color from color object if exists
-	if (typeof colornum == "object" &&
+	if (typeof colornum === "object" &&
         typeof colornum["color"] === "string") {
         return colornum["color"];
     }
