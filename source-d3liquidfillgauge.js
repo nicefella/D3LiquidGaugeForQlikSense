@@ -271,26 +271,32 @@ function loadLiquidFillGauge(elementId, value, config) {
 }
 	
 function getColorHex(colornum) {
+    
+	// Return color from color object if exists
+	if (typeof colornum == "object" &&
+        typeof colornum["color"] === "string") {
+        return colornum["color"];
+    }
   
-	  var colorHex;
+    var colorHex;
   
-	  switch (colornum) 
-	  {
-		  case 0: colorHex = "#b0afae"; break;
-		  case 1: colorHex = "#7a7a78"; break;
-		  case 2: colorHex = "#525150"; break;
-		  case 3: colorHex = "#4376a8"; break;
-		  case 4: colorHex = "#7eb9d9"; break;
-		  case 5: colorHex = "#b5d6e8"; break;
-		  case 6: colorHex = "#47c447"; break;
-		  case 7: colorHex = "#f73e19"; break;
-		  case 8: colorHex = "#ffcd03"; break;
-		  case 9: colorHex = "#276e27"; break;
-		  case 10: colorHex = "#ffffff"; break;
-		  case 11: colorHex = "#000000"; break;  
-		  default: colorHex = "#eded54";  break;
-	  }
+    switch (colornum) 
+    {
+        case 0: colorHex = "#b0afae"; break;
+        case 1: colorHex = "#7a7a78"; break;
+        case 2: colorHex = "#525150"; break;
+        case 3: colorHex = "#4376a8"; break;
+        case 4: colorHex = "#7eb9d9"; break;
+        case 5: colorHex = "#b5d6e8"; break;
+        case 6: colorHex = "#47c447"; break;
+        case 7: colorHex = "#f73e19"; break;
+        case 8: colorHex = "#ffcd03"; break;
+        case 9: colorHex = "#276e27"; break;
+        case 10: colorHex = "#ffffff"; break;
+        case 11: colorHex = "#000000"; break;  
+        default: colorHex = "#eded54";  break;
+    }
 	  
-	  return colorHex;
+	return colorHex;
 	
-	}
+}
